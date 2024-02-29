@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rojas.gestionbiblioteca.controllers.PrestamoController">
+   <children>
+      <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="310.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#onClickCloseButton" prefHeight="54.0" prefWidth="132.0" style="-fx-background-color: red;" text="Salir" textFill="WHITE" />
+      <Button fx:id="guardarButton" layoutX="158.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#onClickGuardarButton" prefHeight="54.0" prefWidth="132.0" style="-fx-background-color: green;" text="Guardar" textFill="WHITE" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="606.0" style="-fx-background-color: purple;" text="PRESTAMOS" textFill="#ae9393">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="71.0" prefHeight="22.0" prefWidth="124.0" text="Nombre del libro">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="110.0" prefHeight="22.0" prefWidth="138.0" text="Nombre del cliente">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLibro" layoutX="175.0" layoutY="69.0" />
+      <TextField fx:id="txtCliente" layoutX="175.0" layoutY="108.0" />
+      <Label fx:id="confirmationLable" layoutX="226.0" layoutY="231.0" style="-fx-background-color: #FCE1E1;" text="Prestamo realizado" visible="false">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="154.0" prefHeight="22.0" prefWidth="138.0" text="Fecha" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFecha" layoutX="175.0" layoutY="152.0" />
+      <Label fx:id="confirmationLabel" layoutX="227.0" layoutY="225.0" prefHeight="38.0" prefWidth="165.0" text="Prestamo Realizado" visible="false">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
