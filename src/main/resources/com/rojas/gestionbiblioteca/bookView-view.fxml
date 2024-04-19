@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rojas.gestionbiblioteca.controllers.BookViewController">
+    <children>
+        <TableView fx:id="tabla" layoutX="93.0" layoutY="30.0" prefHeight="266.0" prefWidth="413.0">
+            <columns>
+                <TableColumn fx:id="tituloColumn" prefWidth="114.4000244140625" text="Título" />
+                <TableColumn fx:id="autorColumn" prefWidth="120.79998779296875" text="Autor" />
+                <TableColumn fx:id="editorialColumn" prefWidth="107.20001220703125" text="Editorial" />
+                <TableColumn fx:id="cantidadColumn" prefWidth="71.99993896484375" text="Cantidad " />
+            </columns>
+        </TableView>
+        <Button layoutX="274.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedSalirBtn" text="SALIR" />
+    </children>
+</AnchorPane>
