@@ -47,5 +47,10 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
+      <BottomNavigationButton fx:id="buscarButton" layoutX="240.0" layoutY="175.0" onMouseClicked="#onClickBuscarButton" prefHeight="129.0" prefWidth="160.0" selected="true" style="-fx-background-color: aquamarine;" text="Buscar Libros">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </BottomNavigationButton>
    </children>
 </AnchorPane>

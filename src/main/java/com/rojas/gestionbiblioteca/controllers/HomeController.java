@@ -43,6 +43,9 @@ public class HomeController {
     private BottomNavigationButton bookViewBtn;
 
     @FXML
+    private BottomNavigationButton buscarButton;
+
+    @FXML
     void onClickBookViewBtn(MouseEvent event) {
         HelloApplication.newStage("bookView-view", "App - Book View");
     }
@@ -65,6 +68,11 @@ public class HomeController {
     @FXML
     void onClickPrestamoButton(MouseEvent event) {
         HelloApplication.newStage("prestamo-view", "App - View Prestamo");
+    }
+
+    @FXML
+    void onClickBuscarButton(MouseEvent event) {
+        HelloApplication.newStage("buscarLibro-view", "App - View SearchBook");
     }
 
     @FXML
