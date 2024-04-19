@@ -15,33 +15,39 @@
             <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="23.0" layoutY="71.0" prefHeight="22.0" prefWidth="124.0" text="Nombre del libro">
+      <Label layoutX="157.0" layoutY="150.0" prefHeight="22.0" prefWidth="124.0" text="Nombre del libro">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="15.0" layoutY="110.0" prefHeight="22.0" prefWidth="138.0" text="Nombre del cliente">
+      <Label layoutX="150.0" layoutY="112.0" prefHeight="22.0" prefWidth="138.0" text="Nombre del cliente">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtLibro" layoutX="175.0" layoutY="69.0" />
-      <TextField fx:id="txtCliente" layoutX="175.0" layoutY="108.0" />
+      <TextField fx:id="txtLibro" layoutX="309.0" layoutY="148.0" />
+      <TextField fx:id="txtCliente" layoutX="309.0" layoutY="110.0" />
       <Label fx:id="confirmationLable" layoutX="226.0" layoutY="231.0" style="-fx-background-color: #FCE1E1;" text="Prestamo realizado" visible="false">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="154.0" prefHeight="22.0" prefWidth="138.0" text="Fecha" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="195.0" prefHeight="22.0" prefWidth="138.0" text="Fecha de prestamo" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtFecha" layoutX="175.0" layoutY="152.0" />
+      <TextField fx:id="txtFechain" layoutX="308.0" layoutY="193.0" />
       <Label fx:id="confirmationLabel" layoutX="227.0" layoutY="225.0" prefHeight="38.0" prefWidth="165.0" text="Prestamo Realizado" visible="false">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="233.0" prefHeight="22.0" prefWidth="138.0" text="Fecha de entrega" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFechafin" layoutX="309.0" layoutY="231.0" />
    </children>
 </AnchorPane>

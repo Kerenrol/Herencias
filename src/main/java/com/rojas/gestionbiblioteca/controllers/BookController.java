@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -16,25 +17,25 @@ import javafx.scene.input.MouseEvent;
 public class BookController {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
+    private Button closeButton;
 
     @FXML
     private Label confirmacionTxt;
 
     @FXML
-    private Button closeButton;
-
-    @FXML
     private Button guardarButton;
 
     @FXML
-    private TextField txtNombre;
+    private TextField txtAutor;
 
     @FXML
-    private TextField txtAutor;
+    private TextField txtCantidad;
+
+    @FXML
+    private TextField txtEditorial;
+
+    @FXML
+    private TextField txtNombre;
 
     @FXML
     void onClickCloseButton(MouseEvent event) {
@@ -43,12 +44,23 @@ public class BookController {
 
     @FXML
     void onClickGuardarButton(MouseEvent event){
-        ArrayList<Libros> listaLibros = HelloApplication.getBiblioteca().getListaLibros();
-        String nombre = txtNombre.getText();
-        String autor = txtAutor.getText();
-        Libros libro = new Libros(nombre, autor);
-        if (listaLibros.add(libro)) {
-            confirmacionTxt.setVisible(true);
+    String titulo = this.txtNombre.getText();
+    String autor = this.txtAutor.getText();
+    String editorial = this.txtEditorial.getText();
+    String cantidad = this.txtCantidad.getText();
+
+    Libros libro= new Libros(titulo, autor, editorial, cantidad);
+
+    if (!HelloApplication.getLibros().contains(libro)) {
+        HelloApplication.getLibros().add(libro);
+
+        mostrarAlerta("Éxito", "Se ha agregado un nuevo libro.");
+
+        System.out.println("Se agregó el libro: ");
+        System.out.println("Título: "+titulo);
+        System.out.println("Autor: "+autor);
+        System.out.println("Editorial: "+editorial);
+        System.out.println("Cantidad Disponible: "+cantidad);
         }
         limpiarCampos();
     }
@@ -56,6 +68,8 @@ public class BookController {
     private void limpiarCampos() {
         txtNombre.clear();
         txtAutor.clear();
+        txtEditorial.clear();
+        txtCantidad.clear();
     }
 
     @FXML
@@ -65,5 +79,13 @@ public class BookController {
 
         guardarButton.getStyleClass().setAll("btn", "btn-success");
         guardarButton.setStyle("-fx-font-size: 15px; -fx-font-weight: 700; -fx-alignment: center;");
+    }
+
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
     }
 }

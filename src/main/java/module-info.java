@@ -6,6 +6,7 @@ module com.rojas.gestionbiblioteca {
     requires com.gluonhq.charm.glisten;
     requires java.desktop;
 
+    opens com.rojas.gestionbiblioteca.models to javafx.base;
     opens com.rojas.gestionbiblioteca to javafx.fxml;
     exports com.rojas.gestionbiblioteca;
     exports com.rojas.gestionbiblioteca.controllers;

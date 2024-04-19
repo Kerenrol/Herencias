@@ -1,19 +1,12 @@
 package com.rojas.gestionbiblioteca.controllers;
 
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
-
-import com.rojas.gestionbiblioteca.models.Libros;
-import com.rojas.gestionbiblioteca.models.Usuario;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-
 import com.rojas.gestionbiblioteca.HelloApplication;
 import com.rojas.gestionbiblioteca.models.Prestamos;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class PrestamoController {
@@ -25,13 +18,19 @@ public class PrestamoController {
     private Label confirmationLabel;
 
     @FXML
+    private Label confirmationLable;
+
+    @FXML
     private Button guardarButton;
 
     @FXML
     private TextField txtCliente;
 
     @FXML
-    private TextField txtFecha;
+    private TextField txtFechafin;
+
+    @FXML
+    private TextField txtFechain;
 
     @FXML
     private TextField txtLibro;
@@ -43,28 +42,40 @@ public class PrestamoController {
 
     @FXML
     void onClickGuardarButton(MouseEvent event) {
-        ArrayList<Prestamos> prestamo = HelloApplication.getBiblioteca().getListaPrestamos();
-        String fecha = txtFecha.getText();
-        String usuario = txtCliente.getText();
-        String libros =  txtLibro.getText();
-        Prestamos prestar = new Prestamos(fecha, usuario, libros);
-        if (prestamo.add(prestar)) {
-            confirmationLabel.setVisible(true);
+        String nombre = txtCliente.getText();
+        String libro = txtLibro.getText();
+        String fechain = txtFechain.getText();
+        String fechafin = txtFechafin.getText();
+
+        Prestamos prestamo = new Prestamos(nombre, libro, fechain, fechafin);
+
+        if (!HelloApplication.getPrestamos().contains(prestamo)) {
+            HelloApplication.getPrestamos().add(prestamo);
+
+            mostrarAlerta("Éxito", "Se ha agregado un nuevo prestamo.");
+
+            System.out.println("Nuevo prestamo: ");
+            System.out.println("Usuario: "+prestamo.getPersona());
+            System.out.println("Libro: "+prestamo.getLibro());
+            System.out.println("Fecha de prestamo: "+prestamo.getFechaPrestamo());
+            System.out.println("Fecha de devolución: "+prestamo.getFechaDevolucion());
         }
+        limpiarCampos();
     }
 
     private void limpiarCampos() {
         txtCliente.clear();
         txtLibro.clear();
-        txtFecha.clear();
+        txtFechain.clear();
+        txtFechafin.clear();
     }
 
-    @FXML
-    void initialize() {
-        closeButton.getStyleClass().setAll("btn", "btn-success");
-        closeButton.setStyle("-fx-font-size: 15px; -fx-font-weight: 700; -fx-alignment: center;");
-
-        guardarButton.getStyleClass().setAll("btn", "btn-success");
-        guardarButton.setStyle("-fx-font-size: 15px; -fx-font-weight: 700; -fx-alignment: center;");
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(null);
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
     }
+
 }

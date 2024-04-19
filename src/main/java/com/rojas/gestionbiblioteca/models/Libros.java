@@ -1,22 +1,36 @@
 package com.rojas.gestionbiblioteca.models;
 
+import java.util.ArrayList;
+
 public class Libros {
-    protected String nombre;
-    protected String autor;
+    private String titulo;
+    private String autor;
+    private String editorial;
+    private String cantidadDisponible;
+
+    private ArrayList<Libros> listaLibros;
 
     public Libros() {
+        listaLibros = new ArrayList<>();
     }
 
-    public Libros(String nombre, String autor) {
-        this.nombre = nombre;
+    public ArrayList<Libros> getListaLibros() {
+        return listaLibros;
+    }
+
+    public Libros(String titulo, String autor, String editorial, String cantidadDisponible) {
+        this.titulo = titulo;
         this.autor = autor;
-    }
-    public String getNombre() {
-        return nombre;
+        this.editorial = editorial;
+        this.cantidadDisponible = cantidadDisponible;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getAutor() {
@@ -25,6 +39,22 @@ public class Libros {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public String getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    public String getCantidadDisponible() {
+        return cantidadDisponible;
+    }
+
+    public void setCantidadDisponible(String cantidadDisponible) {
+        this.cantidadDisponible = cantidadDisponible;
     }
 }
 

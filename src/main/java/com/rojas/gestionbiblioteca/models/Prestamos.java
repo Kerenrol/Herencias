@@ -1,50 +1,60 @@
 package com.rojas.gestionbiblioteca.models;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Prestamos {
-    private int id;
-    private String date;
-    private String usuario;
-    private String libros;
+    private String persona;
+    private String libro;
+    private String fechaPrestamo;
+    private String fechaDevolucion;
 
-    public Prestamos(String date, String usuario, String libros) {
-        this.date = date;
-        this.usuario = usuario;
-        this.libros = libros;
+    private ArrayList<Prestamos> listaPrestamos;
+
+    public Prestamos() {
+        listaPrestamos = new ArrayList<>();
     }
 
-    public String getDate() {
-        return date;
+    public ArrayList<Prestamos> getListaPrestamos() {
+        return listaPrestamos;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public Prestamos(String persona, String libro, String fechaPrestamo, String fechaDevolucion) {
+        this.persona = persona;
+        this.libro = libro;
+        this.fechaPrestamo = fechaPrestamo;
+        this.fechaDevolucion = fechaDevolucion;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getPersona() {
+        return persona;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setPersona(String persona) {
+        this.persona = persona;
     }
 
-    public String getLibros() {
-        return libros;
+    public String getLibro() {
+        return libro;
     }
 
-    public void setLibros(String libros) {
-        this.libros = libros;
+    public void setLibro(String libro) {
+        this.libro = libro;
     }
 
-    @Override
-    public String toString() {
-        return "Prestamo{"+
-                "ID: " + id +
-                ", FECHA: " + date +
-                ", LIBRO: " + libros +
-                ", USUARIO: " + usuario +
-                '}';
+    public String getFechaPrestamo() {
+        return fechaPrestamo;
+    }
+
+    public void setFechaPrestamo(String fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
+    }
+
+    public String getFechaDevolucion() {
+        return fechaDevolucion;
+    }
+
+    public void setFechaDevolucion(String fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
     }
 }
