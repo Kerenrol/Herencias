@@ -4,6 +4,7 @@
 <?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
 <?import com.gluonhq.charm.glisten.control.Icon?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -11,7 +12,7 @@
    <children>
       <BottomNavigation prefHeight="136.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
           <actionItems>
-              <BottomNavigationButton fx:id="bookButton" onMouseClicked="#onClickBookButton" selected="true" style="-fx-background-color: aquamarine;" text="Book">
+              <BottomNavigationButton fx:id="bookButton" onMouseClicked="#onClickBookButton" selected="true" style="-fx-background-color: #F090DD;" text="Book">
                   <graphic>
                       <Icon content="BOOK" />
                   </graphic>
@@ -19,7 +20,7 @@
                   <Font size="15.0" />
                </font>
               </BottomNavigationButton>
-              <BottomNavigationButton fx:id="clientButton" onMouseClicked="#onClickClientButton" prefHeight="75.0" prefWidth="155.0" selected="true" style="-fx-background-color: aquamarine;" text="Client">
+              <BottomNavigationButton fx:id="clientButton" onMouseClicked="#onClickClientButton" prefHeight="75.0" prefWidth="155.0" selected="true" style="-fx-background-color: #EBB893;" text="Client">
                   <graphic>
                       <Icon content="RECENT_ACTORS" />
                   </graphic>
@@ -27,7 +28,7 @@
                       <Font size="15.0" />
                   </font>
               </BottomNavigationButton>
-            <BottomNavigationButton fx:id="prestamosButton" onMouseClicked="#onClickPrestamoButton" selected="true" style="-fx-background-color: aquamarine;" text="Prestamo" textAlignment="CENTER">
+            <BottomNavigationButton fx:id="prestamosButton" onMouseClicked="#onClickPrestamoButton" selected="true" style="-fx-background-color: #BCF0AF;" text="Prestamo" textAlignment="CENTER">
                <graphic>
                   <Icon content="BOOKMARK" />
                </graphic>
@@ -35,11 +36,12 @@
                   <Font size="15.0" />
                </font>
             </BottomNavigationButton>
-            <BottomNavigationButton fx:id="bookViewBtn" onMouseClicked="#onClickBookViewBtn" prefHeight="75.0" prefWidth="155.0" selected="true" style="-fx-background-color: aquamarine;" text="Vista de Libros">
+            <BottomNavigationButton fx:id="bookViewBtn" onMouseClicked="#onClickBookViewBtn" prefHeight="75.0" prefWidth="155.0" selected="true" style="-fx-background-color: #AFC7F0;" text="Vista de Libros">
                <font>
                   <Font size="15.0" />
                </font>
             </BottomNavigationButton>
+
           </actionItems>
       </BottomNavigation>
       <Button fx:id="exitButton" layoutX="256.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#onMouseClickExitButton" prefHeight="42.0" prefWidth="128.0" text="Salir">
@@ -47,7 +49,18 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <BottomNavigationButton fx:id="buscarButton" layoutX="240.0" layoutY="175.0" onMouseClicked="#onClickBuscarButton" prefHeight="129.0" prefWidth="160.0" selected="true" style="-fx-background-color: aquamarine;" text="Buscar Libros">
+      <BottomNavigationButton fx:id="buscarButton" layoutX="83.0" layoutY="175.0" onMouseClicked="#onClickBuscarButton" prefHeight="129.0" prefWidth="160.0" selected="true" style="-fx-background-color: #EAE6AE;" text="Buscar Libros">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </BottomNavigationButton>
+      <BottomNavigationButton fx:id="deseosButton" layoutX="240.0" layoutY="175.0" onMouseClicked="#onClickDeseosButton" prefHeight="129.0" prefWidth="160.0" selected="true" style="-fx-background-color: #CEAEEA;" text="Agregar Lista de desos">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </BottomNavigationButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-17.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" />
+      <BottomNavigationButton fx:id="verDeseosButton" layoutX="400.0" layoutY="175.0" onMouseClicked="#onClickVerDeseosButton" prefHeight="129.0" prefWidth="160.0" selected="true" style="-fx-background-color: #FFA3A3;" text="Ver Lista de desos">
          <font>
             <Font size="15.0" />
          </font>

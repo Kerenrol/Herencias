@@ -40,10 +40,26 @@ public class HomeController {
     private BottomNavigationButton clientButton;
 
     @FXML
+    private BottomNavigationButton deseosButton;
+
+    @FXML
     private BottomNavigationButton bookViewBtn;
 
     @FXML
     private BottomNavigationButton buscarButton;
+
+    @FXML
+    private BottomNavigationButton verDeseosButton;
+
+    @FXML
+    void onClickVerDeseosButton(MouseEvent event) {
+        HelloApplication.newStage("verDeseos-view","App - Ver Deseos view");
+    }
+
+    @FXML
+    void onClickDeseosButton(MouseEvent event) {
+        HelloApplication.newStage("listaDeseos-view", "App - Deseos View");
+    }
 
     @FXML
     void onClickBookViewBtn(MouseEvent event) {

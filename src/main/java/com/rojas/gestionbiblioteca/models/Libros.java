@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Libros {
     private String titulo;
     private String autor;
+    private String idioma;
     private String editorial;
     private String cantidadDisponible;
 
@@ -18,9 +19,10 @@ public class Libros {
         return listaLibros;
     }
 
-    public Libros(String titulo, String autor, String editorial, String cantidadDisponible) {
+    public Libros(String titulo, String autor, String idioma, String editorial, String cantidadDisponible) {
         this.titulo = titulo;
         this.autor = autor;
+        this.idioma = idioma;
         this.editorial = editorial;
         this.cantidadDisponible = cantidadDisponible;
     }
@@ -55,6 +57,14 @@ public class Libros {
 
     public void setCantidadDisponible(String cantidadDisponible) {
         this.cantidadDisponible = cantidadDisponible;
+    }
+
+    public String getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(String idioma) {
+        this.idioma = idioma;
     }
 }
 

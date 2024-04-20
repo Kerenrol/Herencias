@@ -38,6 +38,9 @@ public class BookController {
     private TextField txtNombre;
 
     @FXML
+    private TextField txtIdioma;
+
+    @FXML
     void onClickCloseButton(MouseEvent event) {
         HelloApplication.getStageView().close();
     }
@@ -46,10 +49,11 @@ public class BookController {
     void onClickGuardarButton(MouseEvent event){
     String titulo = this.txtNombre.getText();
     String autor = this.txtAutor.getText();
+    String idioma = this.txtIdioma.getText();
     String editorial = this.txtEditorial.getText();
     String cantidad = this.txtCantidad.getText();
 
-    Libros libro= new Libros(titulo, autor, editorial, cantidad);
+    Libros libro= new Libros(titulo, autor, idioma, editorial, cantidad);
 
     if (!HelloApplication.getLibros().contains(libro)) {
         HelloApplication.getLibros().add(libro);
@@ -59,6 +63,7 @@ public class BookController {
         System.out.println("Se agregó el libro: ");
         System.out.println("Título: "+titulo);
         System.out.println("Autor: "+autor);
+        System.out.println("Idioma: "+idioma);
         System.out.println("Editorial: "+editorial);
         System.out.println("Cantidad Disponible: "+cantidad);
         }
@@ -70,6 +75,7 @@ public class BookController {
         txtAutor.clear();
         txtEditorial.clear();
         txtCantidad.clear();
+        txtIdioma.clear();
     }
 
     @FXML

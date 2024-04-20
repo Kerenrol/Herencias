@@ -1,7 +1,7 @@
 package com.rojas.gestionbiblioteca.controllers;
 
 import com.rojas.gestionbiblioteca.HelloApplication;
-import com.rojas.gestionbiblioteca.models.Libros;
+import com.rojas.gestionbiblioteca.models.ListaDeseos;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -12,39 +12,30 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BookViewController implements Initializable {
+public class VerDeseosController implements Initializable {
 
     @FXML
-    private TableColumn<Libros, String> autorColumn;
+    private TableColumn<ListaDeseos, String> autorColumn;
 
     @FXML
-    private TableColumn<Libros, String> cantidadColumn;
+    private TableColumn<ListaDeseos, String> editorialColumn;
 
     @FXML
-    private TableColumn<Libros, String> idiomaColumn;
+    private TableView<ListaDeseos> tabla;
 
     @FXML
-    private TableColumn<Libros, String> editorialColumn;
-
-    @FXML
-    private TableView<Libros> tabla;
-
-    @FXML
-    private TableColumn<Libros, String> tituloColumn;
+    private TableColumn<ListaDeseos, String> tituloColumn;
 
     @FXML
     void OnMouseClickedSalirBtn(MouseEvent event) {
-        HelloApplication.getStageView().close();
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.tituloColumn.setCellValueFactory(new PropertyValueFactory<>("titulo"));
         this.autorColumn.setCellValueFactory(new PropertyValueFactory<>("autor"));
-        this.idiomaColumn.setCellValueFactory(new PropertyValueFactory<>("idioma"));
         this.editorialColumn.setCellValueFactory(new PropertyValueFactory<>("editorial"));
-        this.cantidadColumn.setCellValueFactory(new PropertyValueFactory<>("cantidadDisponible"));
 
-        this.tabla.setItems(HelloApplication.getLibros());
+        this.tabla.setItems(HelloApplication.getListaDeseos());
     }
 }

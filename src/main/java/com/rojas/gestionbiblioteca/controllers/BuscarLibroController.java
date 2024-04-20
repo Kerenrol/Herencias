@@ -34,6 +34,9 @@ public class BuscarLibroController {
     private TextField txtEditorial;
 
     @FXML
+    private TextField txtIdioma;
+
+    @FXML
     private TextField txtNombre;
 
     @FXML
@@ -55,6 +58,7 @@ public class BuscarLibroController {
             txtAutor.setText(String.valueOf(libroEncontrado.getAutor()));
             txtCantidad.setText(String.valueOf(libroEncontrado.getCantidadDisponible()));
             txtEditorial.setText(String.valueOf(libroEncontrado.getEditorial()));
+            txtIdioma.setText(String.valueOf(libroEncontrado.getIdioma()));
         } else {
         }
     }

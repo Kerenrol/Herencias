@@ -20,6 +20,7 @@ public class HelloApplication extends javafx.application.Application {
     private static Stage stageRoot;
     private static Libros libro = new Libros();
     private static Prestamos prestamo = new Prestamos();
+    private static ObservableList<ListaDeseos> listaDeseos = FXCollections.observableArrayList();
     private static ObservableList<Prestamos> prestamos = FXCollections.observableArrayList();
     private static ObservableList<Libros> libros = FXCollections.observableArrayList();
     private static Persona persona = new Persona();
@@ -99,6 +100,9 @@ public class HelloApplication extends javafx.application.Application {
 
     public static ObservableList<Prestamos> getPrestamos() {
         return prestamos;
+    }
+    public static ObservableList<ListaDeseos> getListaDeseos() {
+        return listaDeseos;
     }
 
     public static void main(String[] args) {

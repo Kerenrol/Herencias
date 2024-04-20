@@ -13,18 +13,18 @@
                 <Font name="System Bold" size="15.0" />
             </font>
         </Button>
-        <Label contentDisplay="CENTER" layoutX="237.0" layoutY="61.0" text="Título del libro:">
+        <Label contentDisplay="CENTER" layoutX="237.0" layoutY="37.0" text="Título del libro:">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-        <TextField fx:id="txtNombre" editable="false" layoutX="200.0" layoutY="91.0" prefHeight="30.0" prefWidth="200.0" promptText="Título" />
-        <Label layoutX="277.0" layoutY="124.0" text="Autor:">
+        <TextField fx:id="txtNombre" editable="false" layoutX="200.0" layoutY="67.0" prefHeight="30.0" prefWidth="200.0" promptText="Título" />
+        <Label layoutX="277.0" layoutY="100.0" text="Autor:">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-        <TextField fx:id="txtAutor" editable="false" layoutX="199.0" layoutY="149.0" prefHeight="30.0" prefWidth="200.0" promptText="Autor" />
+        <TextField fx:id="txtAutor" editable="false" layoutX="199.0" layoutY="125.0" prefHeight="30.0" prefWidth="200.0" promptText="Autor" />
         <Button fx:id="buscarButton" layoutX="24.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#onClickBuscarButton" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: green;" text="Buscar" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="15.0" />
@@ -40,23 +40,29 @@
                 <Font name="System Bold" size="17.0" />
             </font>
         </Label>
-        <Label layoutX="267.0" layoutY="189.0" text="Editorial:">
+        <Label layoutX="267.0" layoutY="221.0" text="Editorial:">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-        <TextField fx:id="txtEditorial" editable="false" layoutX="199.0" layoutY="211.0" prefHeight="30.0" prefWidth="200.0" promptText="Editorial" />
-        <Label layoutX="226.0" layoutY="243.0" text="Cantidad Disponible:">
+        <TextField fx:id="txtEditorial" editable="false" layoutX="199.0" layoutY="243.0" prefHeight="30.0" prefWidth="200.0" promptText="Editorial" />
+        <Label layoutX="226.0" layoutY="275.0" text="Cantidad Disponible:">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </Label>
-        <TextField fx:id="txtCantidad" editable="false" layoutX="200.0" layoutY="267.0" prefHeight="30.0" prefWidth="200.0" promptText="Cantidad disponible" />
+        <TextField fx:id="txtCantidad" editable="false" layoutX="200.0" layoutY="299.0" prefHeight="30.0" prefWidth="200.0" promptText="Cantidad disponible" />
         <Label layoutX="412.0" layoutY="62.0" text="Ingrese el nombre del libro">
             <font>
                 <Font name="System Bold Italic" size="14.0" />
             </font>
         </Label>
         <TextField fx:id="txtBuscar" layoutX="429.0" layoutY="91.0" prefHeight="30.0" prefWidth="147.0" promptText="Título" />
+      <Label layoutX="267.0" layoutY="164.0" text="Idioma:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtIdioma" editable="false" layoutX="199.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" promptText="Idioma" />
     </children>
 </AnchorPane>
