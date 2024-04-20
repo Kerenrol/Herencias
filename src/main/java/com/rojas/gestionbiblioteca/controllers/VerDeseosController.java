@@ -28,6 +28,7 @@ public class VerDeseosController implements Initializable {
 
     @FXML
     void OnMouseClickedSalirBtn(MouseEvent event) {
+        HelloApplication.getStageView().close();
     }
 
     @Override
